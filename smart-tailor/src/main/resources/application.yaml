@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: smart-tailor
+  datasource:
+    url: jdbc:postgresql://localhost:5432/smart-tailor-monolit
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  mail:
+    host: smtp.gmail.com
+    username: rama.mamirbek@gmail.com
+    port: 587
+    password: xcfq ehfo ctpu txsl
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+security:
+  jwt:
+    secret: ZnJmcmZyZnN2dmZ2cnZlcmVldmV2UlZCUlZSUlZEU0RTVlJTVlZFVg==
+    access: 3600000
+    refresh: 2592000000
