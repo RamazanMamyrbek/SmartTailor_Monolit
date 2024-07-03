@@ -10,6 +10,7 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Schema(description = "Dto for registration request")
 public class RegisterRequestDto {
     @Schema(description = "Last name", example = "Doe")
     String lastName;

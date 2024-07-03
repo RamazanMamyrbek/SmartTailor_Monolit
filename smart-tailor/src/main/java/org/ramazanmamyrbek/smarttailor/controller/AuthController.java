@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Map;
 
 @RestController
-@Tag(name = "Auth controller")
+@Tag(name = "Endpoints for Auth/Registration")
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @RequestMapping("/api/auth")
@@ -37,7 +37,7 @@ public class AuthController {
         return ResponseEntity.status(HttpStatus.OK).body(new ResponseDto(ResponseMessageConstants.STATUS_200, ResponseMessageConstants.MESSAGE_200));
     }
 
-    @PostMapping("/send-code")
+    @PostMapping("/resend-code")
     @Operation(summary = "Send verification code again")
     public ResponseEntity<ResponseDto> sendVerificationCode(@Valid @Email String email) {
         authService.sendVerificationCode(email);
